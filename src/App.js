@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
 import './App.css';
+import Gallery from './Gallery';
+import LazyImage from './LazyImage';
+import CriticalImagePreloader from './CriticalImagePreloader';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Галерея</h1>
       </header>
+      <main>
+      <CriticalImagePreloader src="link_to_critical_image.jpg" />
+      <LazyImage />
+        <Gallery />
+      </main>
     </div>
   );
 }
 
 export default App;
+
